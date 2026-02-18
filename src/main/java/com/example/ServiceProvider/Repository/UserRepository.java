@@ -1,0 +1,8 @@
+package com.example.ServiceProvider.Repository;
+import com.example.ServiceProvider.Entity.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface UserRepository extends JpaRepository<User, Integer> {
+}

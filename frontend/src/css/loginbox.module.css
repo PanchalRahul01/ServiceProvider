@@ -1,0 +1,90 @@
+/* Page background */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* Center container */
+.authcontainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card style */
+.authcard {
+  background: white;
+  padding: 40px;
+  width: 350px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+/* Heading */
+.authcard h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Inputs */
+.authcard input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.authcard input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 5px rgba(102,126,234,0.5);
+}
+
+/* Login button */
+.authcard button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: #667eea;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.authcard button:hover {
+  background: #5a67d8;
+}
+
+/* Links */
+.authcard p {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.authcard a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.authcard a:hover {
+  text-decoration: underline;
+}
+
+/* Forgot password button */
+.forgotbtn {
+  background: transparent;
+  color: #667eea;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+}

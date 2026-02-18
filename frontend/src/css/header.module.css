@@ -1,0 +1,121 @@
+.navbar{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 15px 7%;
+  text-decoration: none;
+  position: fixed ;
+}
+.logo{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  text-align: center;
+}
+
+.navLinks li {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.navLinks li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.modeIcon{
+  width: 30px;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-top: -5px;
+}
+.searchbox{
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background:#f5f7fb;
+  padding: 2px 5px;
+  border-radius: 50px;
+}
+.searchbox input{
+  padding: 6px;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  color: #706e6e;
+  font-size: 18px;
+  max-width: 200px;
+}
+
+.searchbox input ::placeholder{
+  color: #555252;
+}
+.imgcontainer{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  text-align: center;
+}
+.search{
+  cursor: pointer;
+  height: 30px;
+}
+.userIcon{
+  height: 30px;
+  width: 25px;
+  cursor: pointer;
+}
+
+
+
+
+.loginButton {
+  display: inline-block;
+  padding: 10px 25px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.loginButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+.populerservicesContainerHeader{
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+.populerservicesCardsContainer{
+  display: flex;
+  width: 700px;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.populerservicesCards{
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 200px;
+  height: 100px;
+  padding: 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+}

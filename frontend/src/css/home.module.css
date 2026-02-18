@@ -1,0 +1,239 @@
+
+
+/* home.module.css */
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* HERO SECTION */
+.homeContent {
+  width: 100%;
+  height: 650px;
+  background-image: url('../assets/hero-bg.jpg');
+  background-color: rgba(20, 30, 80, 0.85);
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+
+.homeHeading {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+.homeHeading span {
+  color: #ff6b4a;
+}
+
+
+.homeContent p {
+  color: #e5e5e5;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+
+/* SEARCH BOX */
+.homeSearchContainer {
+  display: flex;
+  width: 65 0px;
+  max-width: 90%;
+  background: white;
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+.homeLocationSelect {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  background: #f0f0f0;
+}
+
+.homeLocationSelect img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.homeLocationSelect select {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  color: #333;
+  outline: none;
+  cursor: pointer;
+}
+
+.homeSearch {
+  flex: 1;
+  padding: 15px 20px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+
+.homeButton {
+  padding: 0 30px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+
+.homeButton:hover {
+  background: linear-gradient(135deg, #5a6fd8, #6a4194);
+}
+
+
+/* SERVICES SECTION */
+.homeServices {
+  flex: 1;
+  padding: 60px 20px;
+  background: #f4f6fb;
+}
+
+.homeServices {
+  flex: 1;
+  padding: 60px 20px;
+  background: #f4f6fb;
+}
+
+/* CATEGORY CARDS */
+.homeCategories {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.homeCategories option {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 30px;
+  color: white;
+  font-weight: 60;
+  font-size: 0.8rem;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.homeCategories span:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  background: linear-gradient(135deg, #5a6fd8, #6a4194);
+}
+.homeServices{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.homeServices h2{
+  font-size: 2rem;
+  color: #333;
+}
+.homeServices p{
+  color: #666;
+  font-size: 1rem;
+}
+.homeServiceCardsContainer{
+  display: flex;
+  width: 700px;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.homeServiceCard{
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 200px;
+  height: 135px;
+  padding: 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+}
+.homeServiceCard img{
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+.homeServiceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+.populerservicesContainer {
+    width: 100%;
+    min-height: 500px;
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+}
+
+.populerservicesCardsContainer {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.populerservicesCards {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    width: 370px;
+    min-height: 280px;
+    padding: 25px;
+    margin-top: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.populerservicesCards:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.populerservicesContainerHeader {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: left;
+}
+.populerservicesContainer p {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-align: left;
+}

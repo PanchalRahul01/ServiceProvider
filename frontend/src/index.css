@@ -1,0 +1,19 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+  font-family: sans-serif;
+}
+.nav-container{
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #f5f7fb;
+  transition: 0.5s;
+}
+.nav-container.dark{
+  background-color: #222;
+  color: aliceblue;
+}
+.dark.header{
+  background-color: #333;
+}
