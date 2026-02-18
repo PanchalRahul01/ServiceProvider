@@ -31,4 +31,3 @@ public class AllServices {
     private int reviews_count;
 
 }
-    
