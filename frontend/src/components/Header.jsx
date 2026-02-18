@@ -28,14 +28,19 @@ function Header() {
           </ul>
         <div className={style.imgcontainer}>
         {user ? (
-          <button className={style.loginButton} onClick={logout}>
-            Logout
-          </button>
+          <>
+            <button className={style.dashboardButton}><Link className={style.dashboardLink} to="/dashboard" >DashBoard</Link></button>
+            <button className={style.loginButton} onClick={logout}>
+              Logout
+            </button>
+          </>  
         ) : (
           <Link className={style.loginButton} to="/login">
             Login
           </Link>
         )}
+
+
       </div>
       
     </div>

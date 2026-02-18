@@ -94,6 +94,7 @@
 .loginButton:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  background: linear-gradient(135deg, #2e59d9, #17a673);
 }
 .populerservicesContainerHeader{
   font-size: 1rem;
@@ -118,4 +119,32 @@
   display: flex;
   flex-direction: column;
   align-items: center;  
+}
+.dashboardButton {
+  display: inline-block;
+  padding: 10px 25px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboardLink{
+  color: white;
+  text-decoration: none;
+}
+.dashboardButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(135deg, #2e59d9, #17a673);
+}
+
+.dashboardButton:active {
+  transform: scale(0.96);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dashboardButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(78, 115, 223, 0.4);
 }
