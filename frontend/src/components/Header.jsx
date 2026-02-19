@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import {auth} from "../firebase/setup";
 import { onAuthStateChanged,signOut } from "firebase/auth";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 function Header() {
 
   const[user,setUser] = useState(null);
+  const navigate=useNavigate();
 
   const unsubscribe = onAuthStateChanged(auth,(currentUser) => {
     setUser(currentUser);
@@ -16,6 +18,7 @@ function Header() {
   const logout = async () => {
     await signOut(auth);
     alert("Logged out");
+    navigate("/");
   };
 
   return (
@@ -24,7 +27,7 @@ function Header() {
         <ul className={style.navLinks}>
              <li><Link to="/">Home</Link></li>
              <li><Link to="/services">Book-Service</Link></li>
-             <li><Link to="/provide-Service">Provide-Service</Link></li>
+             <li><Link to="/provide-services">Provide-Service</Link></li>
           </ul>
         <div className={style.imgcontainer}>
         {user ? (

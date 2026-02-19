@@ -7,11 +7,10 @@ import Ser from "./pages/Services.jsx";
 import Login from "./pages/EmailLogin.jsx";
 import Signup from "./pages/signup.jsx";
 import ForgotPassword from "./pages/forgotepass.jsx";
+import IsAuthenticate from './components/IsAuthenticate.jsx';
+import ProvideService from './pages/ProvideService.jsx';
 
 function App() {
-
-
-  
 
   return (
     <>
@@ -22,7 +21,16 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/services" element={<Ser/>} />
+            <Route path="/services" element={
+              <IsAuthenticate>
+                <Ser/>
+              </IsAuthenticate>
+              } />
+            <Route path="/provide-services" element={
+              <IsAuthenticate>
+                <ProvideService/>
+              </IsAuthenticate>
+            }/>
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />

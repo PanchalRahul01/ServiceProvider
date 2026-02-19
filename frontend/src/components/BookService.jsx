@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import ServiceCard from "./ServiceCard";
 import { useState } from "react";
 import axios from "axios";
+import {auth} from "../firebase/setup"
 
 function BookService() {
   const { state } = useLocation();
@@ -28,6 +29,14 @@ function BookService() {
 
   // Submit booking
   const submit = async () => {
+
+    const user=auth.currentUser;
+
+    if(!user){
+      navigate("/login");
+      return;
+    }
+
     try {
       const payload = {
         ...form,
