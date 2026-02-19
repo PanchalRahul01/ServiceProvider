@@ -20,9 +20,4 @@ public class HomeController {
         return "HomeController Running";
     }
 
-    @GetMapping("/users")
-    public List<User> getAllUsers() {
-        return userservices.getUsers();
-    }
-
 }

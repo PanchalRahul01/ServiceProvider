@@ -13,16 +13,18 @@ public class Userservices {
 
     @Autowired
     private UserRepository userRepository;
-    
-    @Autowired
-    private LocationRepo  locationRepo;
 
-    public List<User> getUsers() {
-        return userRepository.findAll();
-    }
-    
-    public User signUp(User  user) {
-       return userRepository.save(user);
+    public User saveUser(User user) {
+
+        if (userRepository.existsByEmail(user.getEmail())) {
+            throw new RuntimeException("Email already exists");
+        }
+
+        if (userRepository.existsByFirebaseUid(user.getFirebaseUid())) {
+            throw new RuntimeException("Firebase UID already exists");
+        }
+
+        return userRepository.save(user);
     }
     
 }
