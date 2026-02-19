@@ -9,7 +9,8 @@ import Signup from "./pages/signup.jsx";
 import ForgotPassword from "./pages/forgotepass.jsx";
 import IsAuthenticate from './components/IsAuthenticate.jsx';
 import ProvideService from './pages/ProvideService.jsx';
-
+import UserDashboard from './pages/UserDashboard.jsx';
+import { User } from 'lucide-react';
 function App() {
 
   return (
@@ -34,6 +35,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/dashboard" element={ <UserDashboard />}/>
           </Routes> 
         </div>
       </BrowserRouter>

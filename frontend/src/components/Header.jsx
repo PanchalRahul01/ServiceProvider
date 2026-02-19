@@ -1,19 +1,21 @@
 import style from "../css/header.module.css";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import {auth} from "../firebase/setup";
 import { onAuthStateChanged,signOut } from "firebase/auth";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 function Header() {
 
   const[user,setUser] = useState(null);
   const navigate=useNavigate();
 
-  const unsubscribe = onAuthStateChanged(auth,(currentUser) => {
-    setUser(currentUser);
+  useEffect(() => {
+      const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
 
     return () => unsubscribe();
-  },[]);
+  }, []);
   
   const logout = async () => {
     await signOut(auth);

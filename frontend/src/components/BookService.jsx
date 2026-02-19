@@ -1,23 +1,38 @@
 import style from "../css/BookService.module.css";
 import { useLocation, useNavigate } from "react-router-dom";
 import ServiceCard from "./ServiceCard";
-import { useState } from "react";
+import { useState ,useEffect} from "react";
 import axios from "axios";
 import {auth} from "../firebase/setup"
+import { onAuthStateChanged } from "firebase/auth";
 
 function BookService() {
+
   const { state } = useLocation();
   const navigate = useNavigate();
+  const user=auth.currentUser;
+
+  console.log(auth.currentUser.uid)
   const service = state;
 
-  const [form, setForm] = useState({
-    userId: 1, // temporary user id (replace with login user later)
-    serviceId: service?.service_id || "",
-    bookingDate: "",
-    bookingTime: "",
-    address: "",
-    notes: ""
+const [userId, setUserId] = useState("");
+
+useEffect(() => {
+  const unsubscribe = onAuthStateChanged(auth, (user) => {
+    if (user) setUserId(user.uid);
   });
+  return () => unsubscribe();
+}, []);
+
+const [form, setForm] = useState({
+  userId: userId,
+  serviceId: service?.service_id || "",
+  bookingDate: "",
+  bookingTime: "",
+  address: "",
+  notes: ""
+});
+
 
   // Handle input change
   const handleChange = (e) => {
@@ -29,8 +44,6 @@ function BookService() {
 
   // Submit booking
   const submit = async () => {
-
-    const user=auth.currentUser;
 
     if(!user){
       navigate("/login");
@@ -57,6 +70,8 @@ function BookService() {
       alert("Booking Failed ❌");
     }
   };
+
+
 
   return (
     <div className={style.bookServiceContainer}>
